@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JESUSTAKEY - Rock paper scissors</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color:#FBF6E9; color:#B97332">
+        <div align="center">
+            <img src="images/RPS-JTK.png" alt="Smiley face" width="300">
+        </div>
+        <br>
+        <img src="images/line.png" alt="Smiley face" width="100%" height="5">
+        <br>
+        <p>In a game of <strong>Rock-Paper-Scissors</strong>, each player chooses to play Rock (R), Paper (P), or Scissors (S).</p>
+        <p>The rules are: Rock beats Scissors, Scissors beats Paper, but Paper beats Rock. If both players use the same strategy, the first player is the winner.</p>
+        <p>A <strong>Rock-Paper-Scissors</strong> game is encoded as a list, where the elements are 2-element lists that encode a player’s name and a player’s strategy.</p>
+        <br>
+        <div>
+        MENU
+        </div>
+        <br>
+        <a href="http://localhost:20483/api/championship/top">TOP winners</a>
+        <br>
+        <a href="http://localhost:20483/api/championship/top?count=7">TOP winners with count</a>
+        <br>
+        <a href="http://localhost:20483/api/championship/resultSingle?game=[[ 'Armando', 'P' ], [ 'Dave', 'S' ]]">Evaluate simple game</a>
+        <br>
+        <a href="http://localhost:20483/api/championship/resultSingle?game=[[[ 'Armando', 'P' ], [ 'Dave', 'S' ]],[[ 'Daniel', 'r' ], [ 'John', 'p' ]]]">Evaluate mini tournament</a>
+        <br>
+        <a href="http://localhost:20483/api/championship/resultSingle?game=[ [ [ ['Armando', 'P'], ['Dave', 'S'] ], [ ['Richard', 'R'], ['Michael', 'S'] ]], [ [ ['Allen', 'S'], ['Omer', 'P'] ], [ ['John', 'R'], ['Robert', 'P'] ] ]]">Evaluate tournament</a>
+        
+        <br>
+         <br>
+        
+        <form action="championship/result" method="post" style="border-style:solid">
+            <p>
+                Select a file:&nbsp; <input type="file" name="file" />
+            </p>
+            <input type="submit" value="Evaluate game" />
+         </form>
+         
+         <form action="championship/test" method="post" style="border-style:solid">
+            <p><strong>See result in html</strong></p>
+            <p>
+                Select a file:&nbsp; <input type="file" name="file" />
+            </p>
+            <input type="submit" value="Evaluate game" />
+         </form>
+        
+        
+        <br>
+        
+        <h2>File downloads</h2>
+        <!--<a href="files/miniTournament.txt" download>Download link</a>-->
+        <a href="files/miniTournament.txt" target="_blank">Download example 1.</a>
+        <!--<a href="files/rpstournament1.txt" download>Download link</a>-->
+        <a href="files/rpstournament1.txt" target="_blank">Download example 2.</a>
+        
+        <footer style="background-color:#D29352; color:white; height:35px;">
+            <p style="padding-top:8px; padding-left:10px">&copy; JESUSTAKEY &REG; - Jes&uacute;s Rub&eacute;n Ram&iacute;rez Jim&eacute;nez.</p>
+        </footer>
+        
+    </body>
+</html>
